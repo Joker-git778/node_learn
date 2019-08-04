@@ -1,0 +1,12 @@
+@url=http://localhost:3000
+@json=Content-Type: application/json
+
+### /
+get {{url}}
+
+###cookie设置
+get {{url}}/set
+
+### cookie获取
+get {{url}}/get
+

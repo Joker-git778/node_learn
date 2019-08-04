@@ -1,0 +1,10 @@
+@url=http://localhost:3000
+
+### 存储session
+get {{url}}/login
+
+### 读取
+get {{url}}
+
+### 销毁
+get {{url}}/loginOut

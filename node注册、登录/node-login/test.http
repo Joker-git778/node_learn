@@ -1,0 +1,50 @@
+@url=http://localhost:3001/api
+@json=Content-Type: application/json
+
+###测试 
+get {{url}}/login
+
+###注册接口
+post {{url}}/register
+{{json}}
+
+{
+    "userName": "user",
+    "passWord": "123123"
+}
+
+###登录接口
+post {{url}}/login
+{{json}}
+
+{
+    "userName": "user",
+    "passWord": "123123"
+}
+
+###注销账号
+post {{url}}/logout
+{{json}}
+
+{
+    "userName": "user",
+    "passWord": "123123"
+}
+
+###返回数据
+get {{url}}/login
+{{json}}
+
+{
+    "userName": "user1",
+    "passWord": "123123"
+}
+
+###读取本地文件
+get {{url}}/category
+
+###图片验证码
+get {{url}}/getCode
+
+###demo
+get {{url}}/demo

@@ -1,0 +1,16 @@
+@url=http://127.0.0.1:3000
+
+###
+get {{url}}
+
+###news 中间件测试
+get {{url}}/news
+
+###public静态资源中间件
+get {{url}}/css/style.css
+
+### 静态资源 虚拟目录
+get {{url}}/static/css/new.css
+
+### 第三方中间件 body-parser 接受post数据  form表单
+get {{url}}/login

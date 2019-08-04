@@ -1,0 +1,37 @@
+@url=http://localhost:3001/api
+@json=Content-Type: application/json
+# 规定请求头
+# 定义变量 @
+
+###所有用户
+# 分割 ###
+
+get {{url}}/users
+###
+
+post {{url}}/register
+{{json}}
+# {{值}} 表示使用变量
+#要有空行表示请求体
+
+{
+    "username": "user11",
+    "password": "123456"
+}
+
+# 注册接口
+
+### 登录
+post {{url}}/login
+{{json}}
+
+{
+    "username": "user11",
+    "password": "123456"
+}
+
+### 个人信息 传token获取
+
+get {{url}}/profile
+Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMjQ3MDVkMzJlNzE2MjBiODA0NWU4MyIsImlhdCI6MTU2MjY3MDY2N30.HeC4OiXs0WXu3ex6A3I9s4qyIR9ZNu1abXE2N1trtyc
+# 请求头  token

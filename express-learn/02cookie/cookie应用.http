@@ -1,0 +1,7 @@
+@url=http://localhost:3000
+
+### 写入城市
+get {{url}}/lvyou?city=上海
+
+### 读取城市
+get {{url}}

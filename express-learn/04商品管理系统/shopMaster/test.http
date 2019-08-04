@@ -1,0 +1,11 @@
+@url = http://localhost:3000
+@json=Content-Type: application/json
+
+###登录
+post {{url}}/doLogin
+{{json}}
+
+{
+    "userName": "12",
+    "passWord": "12323132"
+}
